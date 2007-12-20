@@ -13,6 +13,7 @@ Source0:	http://search.cpan.org/CPAN/authors/id/D/DR/DROLSKY/%{module}-%{version
 Url:		http://search.cpan.org/dist/%{module}/
 BuildArch:	noarch
 BuildRequires:	perl-devel
+BuildRoot:	%{_tmppath}/%{name}-%{version}
 
 %description
 This module can be used to more easily spot the place where a program or a
