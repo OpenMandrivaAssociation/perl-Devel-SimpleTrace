@@ -1,6 +1,6 @@
 %define	module	Devel-SimpleTrace
 %define	name	perl-%{module}
-%define	version 0.06
+%define	version 0.07
 %define	release %mkrel 1
 
 Name:		%{name}
@@ -9,8 +9,8 @@ Release:	%{release}
 Summary:	See where you code warns and dies using stack traces
 License:	GPL or Artistic
 Group:		Development/Perl
-Source0:	http://search.cpan.org/CPAN/authors/id/D/DR/DROLSKY/%{module}-%{version}.tar.bz2
 Url:		http://search.cpan.org/dist/%{module}/
+Source:     http://www.cpan.org/modules/by-module/Devel/%{module}-%{version}.tar.gz
 BuildArch:	noarch
 BuildRequires:	perl-devel
 BuildRoot:	%{_tmppath}/%{name}-%{version}
