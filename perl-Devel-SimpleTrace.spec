@@ -1,19 +1,18 @@
-%define	module	Devel-SimpleTrace
-%define	name	perl-%{module}
-%define	version 0.07
-%define	release %mkrel 3
+%define	upstream_name	 Devel-SimpleTrace
+%define	upstream_version 0.07
 
-Name:		%{name}
-Version:	%{version}
-Release:	%{release}
+Name:       perl-%{upstream_name}
+Version:    %perl_convert_version %{upstream_version}
+Release:    %mkrel 1
+
 Summary:	See where you code warns and dies using stack traces
-License:	GPL or Artistic
+License:	GPL+ or Artistic
 Group:		Development/Perl
-Url:		http://search.cpan.org/dist/%{module}/
-Source:     http://www.cpan.org/modules/by-module/Devel/%{module}-%{version}.tar.gz
+Url:		http://search.cpan.org/dist/%{upstream_name}/
+Source0:    http://www.cpan.org/modules/by-module/Devel/%{upstream_name}-%{upstream_version}.tar.gz
+
 BuildArch:	noarch
-BuildRequires:	perl-devel
-BuildRoot:	%{_tmppath}/%{name}-%{version}
+BuildRoot:	%{_tmppath}/%{name}-%{version}-%{release}
 
 %description
 This module can be used to more easily spot the place where a program or a
@@ -26,7 +25,7 @@ how and where the error or warning occurred. Other than this, their use should
 stay unchanged, even when using die() inside eval().
 
 %prep
-%setup -q -n %{module}-%{version}
+%setup -q -n %{upstream_name}-%{upstream_version}
 
 %build
 %{__perl} Makefile.PL INSTALLDIRS=vendor
@@ -47,5 +46,3 @@ rm -rf %{buildroot}
 %doc Changes LICENSE README
 %{perl_vendorlib}/Devel
 %{_mandir}/*/*
-
-
