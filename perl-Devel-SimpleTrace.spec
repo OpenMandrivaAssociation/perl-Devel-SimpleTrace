@@ -2,14 +2,14 @@
 %define	upstream_version 0.08
 
 Name:		perl-%{upstream_name}
-Version:	%perl_convert_version %{upstream_version}
-Release:	4
+Version:	%{upstream_version}
+Release:	5
 
 Summary:	See where you code warns and dies using stack traces
 License:	GPL+ or Artistic
 Group:		Development/Perl
-Url:		https://search.cpan.org/dist/%{upstream_name}/
-Source0:	http://www.cpan.org/modules/by-module/Devel/%{upstream_name}-%{upstream_version}.tar.gz
+Url:		https://metacpan.org/dist/Devel-SimpleTrace
+Source0:	https://cpan.metacpan.org/authors/id/S/SA/SAPER/Devel-SimpleTrace-%{upstream_version}.tar.gz
 
 BuildRequires:	make
 BuildRequires:	perl-devel
