@@ -1,15 +1,13 @@
 %define	upstream_name	 Devel-SimpleTrace
-%define	upstream_version 0.08
-
 Name:		perl-%{upstream_name}
-Version:	%{upstream_version}
-Release:	5
+Version:	0.08
+Release:	6
 
 Summary:	See where you code warns and dies using stack traces
 License:	GPL+ or Artistic
 Group:		Development/Perl
 Url:		https://metacpan.org/dist/Devel-SimpleTrace
-Source0:	https://cpan.metacpan.org/authors/id/S/SA/SAPER/Devel-SimpleTrace-%{upstream_version}.tar.gz
+Source0:	https://cpan.metacpan.org/authors/id/S/SA/SAPER/Devel-SimpleTrace-%{version}.tar.gz
 
 BuildRequires:	make
 BuildRequires:	perl-devel
@@ -26,7 +24,7 @@ how and where the error or warning occurred. Other than this, their use should
 stay unchanged, even when using die() inside eval().
 
 %prep
-%setup -q -n %{upstream_name}-%{upstream_version}
+%setup -q -n %{upstream_name}-%{version}
 
 %build
 perl Makefile.PL INSTALLDIRS=vendor
@@ -50,9 +48,7 @@ make test
 
 * Wed Jul 29 2009 Jérôme Quelin <jquelin@mandriva.org> 0.70.0-1mdv2011.0
 + Revision: 403103
-- rebuild using %%perl_convert_version
-
-* Thu Jul 31 2008 Thierry Vignaud <tv@mandriva.org> 0.07-3mdv2009.0
+- rebuild using %0.08 Thu Jul 31 2008 Thierry Vignaud <tv@mandriva.org> 0.07-3mdv2009.0
 + Revision: 256636
 - rebuild
 
